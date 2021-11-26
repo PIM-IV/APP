@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCidade"
+        app:srcCompat="@drawable/line" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Tipo de deficiência:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTelefone" />
+
+    <CheckBox
+        android:id="@+id/checkVisual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Visual"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkFisica"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <CheckBox
+        android:id="@+id/checkMental"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Mental"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/checkAuditiva"
+        app:layout_constraintTop_toBottomOf="@+id/checkVisual" />
+
+    <CheckBox
+        android:id="@+id/checkIntelectual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="231dp"
+        android:layout_marginEnd="32dp"
+        android:text="Intelectual"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkAuditiva" />
+
+    <CheckBox
+        android:id="@+id/checkFisica"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="231dp"
+        android:text="Física"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputOE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Órgão Emissor"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputRG" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputUF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="231dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="8dp"
+        android:hint="UF"
+        android:inputType="text"
+        android:maxLength="2"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/inputOE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputRG" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputNascimento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="231dp"
+        android:hint="Data de nascimento"
+        android:inputType="date"
+        android:maxLength="8"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNacionalidade" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputRG"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="231dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="8dp"
+        android:hint="R.G"
+        android:inputType="number"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCPF" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputCPF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="231dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="8dp"
+        android:hint="CPF"
+        android:inputType="number"
+        android:maxLength="11"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="231dp"
+        android:hint="Nome completo"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCodigo" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputNacionalidade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="231dp"
+        android:hint="Nascionalidade"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNome" />
+
+    <EditText
+        android:id="@+id/inputCEP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="231dp"
+        android:ems="10"
+        android:hint="CEP"
+        android:inputType="textPostalAddress"
+        android:maxLength="8"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNascimento" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputRua"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="231dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Rua"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputOE" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputCidade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="231dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Cidade"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputRua" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputTelefone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="231dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Telefone"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCidade" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputEstado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="231dp"
+        android:hint="Estado"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCEP" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputCelular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="231dp"
+        android:hint="Celular"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="231dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEstado" />
+
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="9dp"
+        android:text="Cadastrar"
+        android:textColor="#FDCD00"
+        app:backgroundTint="#040B2F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLimpar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkIntelectual" />
+
+    <Button
+        android:id="@+id/buttonLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="9dp"
+        android:text="Limpar"
+        android:textColor="#FDCD00"
+        app:backgroundTint="#040B2F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonCadastrar"
+        app:layout_constraintTop_toBottomOf="@+id/checkIntelectual" />
+
+    <EditText
+        android:id="@+id/inputCodigo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="330dp"
+        android:ems="1000"
+        android:hint="Código"
+        android:inputType="number"
+        android:maxLength="100"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+
+    <CheckBox
+        android:id="@+id/checkAuditiva"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="231dp"
+        android:text="Auditiva"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkFisica" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputCEP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputOE"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/rectangle_3"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-2dp" />
+
+    <Button
+        android:id="@+id/buttonReservas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Reservas"
+        android:textColor="#FDCD00"
+        app:layout_constraintEnd_toStartOf="@+id/buttonQuarto"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toEndOf="@+id/buttonHospedes"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonHospedes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Hóspedes"
+        android:textColor="#FDCD00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonQuarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Quartos"
+        android:textAllCaps="true"
+        android:textColor="#FDCD00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Cadastro de Hóspedes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+        app:layout_constraintEnd_toEndOf="@+id/imageView20"
+        app:layout_constraintStart_toStartOf="@+id/imageView20"
+        app:layout_constraintTop_toBottomOf="@+id/buttonReservas"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
